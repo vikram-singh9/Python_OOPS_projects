@@ -7,7 +7,7 @@ class Item:
     def get_total_price(self):
         return self.quantity * self.price_per_unit
     
-    
+
 class Cart:
     def __init__(self):
         self.items = []  # Empty list to store added items
@@ -24,7 +24,21 @@ class Cart:
     def print_bill(self):
         print("====== GROCERY BILL ======")
         for item in self.items:
-            print(f"{item.name} - {item.quantity} × {item.price_per_unit} = ₹{item.get_total_price()}")
+            print(f"{item.name} - {item.quantity} × {item.price_per_unit} = pkr {item.get_total_price()}")
         print("--------------------------")
-        print(f"Total Amount: ₹{self.get_total_amount()}")
+        print(f"Total Amount: pkr {self.get_total_amount()}")
         print("==========================")
+
+item1 = Item("Apple", 76, 30)
+item2 = Item("Orange", 12, 10)
+item3 = Item("Mango", 4, 40)
+item4 = Item("Grapes", 23, 90)
+
+cart = Cart()
+
+cart.add_item(item1)
+cart.add_item(item2)
+cart.add_item(item3)
+cart.add_item(item4)
+
+cart.print_bill()  # Print the bill with all items and total amount
