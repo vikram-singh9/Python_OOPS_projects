@@ -1,4 +1,4 @@
-![OOP Python Projects Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSqkXbGkxSAVR_AT69I-X-_r24rxbVJodOEQ&s)
+![OOP Python Projects Banner](https://dotnettrickscloud.blob.core.windows.net/article/oops/3720241010185910.webp)
 
 
 # 🐍 Python OOP Projects
