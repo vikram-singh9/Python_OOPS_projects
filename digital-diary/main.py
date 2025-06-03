@@ -8,7 +8,7 @@ class Note:
 
     def display(self):
         print(f"\nTitle: {self.title}")
-        print(f"Time: {self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Time: {self.date.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"Content:\n{self.content}")
 
 
@@ -37,14 +37,19 @@ class Diary:
 
 note1 = Note("Morning Thoughts", "Today I woke up early and felt fresh.")
 note2 = Note("Evening Reflection", "It was a productive day.")
+note3 = Note("Daily Summary", "I completed all my tasks and learned something new.")
+note4 = Note("Weekend Plans", "Planning to go hiking this weekend.")
 
 dairy = Diary()
 dairy.add_note(note1)
 dairy.add_note(note2)
+dairy.add_note(note3)
+dairy.add_note(note4)
 
 dairy.display_notes()  # Display all notes
 
 dairy.delete_note("Morning Thoughts")  # Delete a note by title
+
 dairy.display_notes()  # Display notes after deletion
 
 
