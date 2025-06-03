@@ -25,7 +25,7 @@ class CarRentalSystem:
             if not car.is_rented:
                 car.show_info()
                 available = True
-        if not available:n
+        if not available:
             print('No cars available!')
 
     def rent_car(self, model):
