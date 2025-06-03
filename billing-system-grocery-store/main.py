@@ -29,6 +29,8 @@ class Cart:
         print(f"Total Amount: pkr {self.get_total_amount()}")
         print("==========================")
 
+        
+
 item1 = Item("Apple", 76, 30)
 item2 = Item("Orange", 12, 10)
 item3 = Item("Mango", 4, 40)
