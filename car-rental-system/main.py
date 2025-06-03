@@ -6,52 +6,64 @@ class Car:
         self.is_rented = False
 
     def show_info(self):
-        status = 'rented' if self.is_rented else 'available'
-        print(f'{self.brand} {self.model} {self.year} - {status}')
+        status = 'Rented' if self.is_rented else 'Available'
+        print(f'{self.brand} {self.model} ({self.year}) - {status}')
 
 
-class carRentalSystem:
+class CarRentalSystem:
     def __init__(self):
         self.cars = []
 
     def add_car(self, car):
         self.cars.append(car)
-        print(f'{self.car} added successfuly!')
+        print(f'{car.brand} {car.model} added successfully!')
 
     def view_available_cars(self):
-        print('\n🚗 Available Cars')
+        print('\n🚗 Available Cars:')
         available = False
         for car in self.cars:
             if not car.is_rented:
                 car.show_info()
                 available = True
         if not available:
-            print('cars are not available!!')
+            print('No cars available!')
 
-    def rent_car(self,model):
+    def rent_car(self, model):
         for car in self.cars:
             if car.model.lower() == model.lower() and not car.is_rented:
                 car.is_rented = True
-                print(f'\n {self.brand} {self.model} car is rented')
+                print(f'\n✅ You rented: {car.brand} {car.model}')
                 return
-            print('car not available!')
+        print('❌ Car not available or already rented!')
 
     def return_car(self, model):
         for car in self.cars:
-            if car.model.lower() == model.lower()  and car.is_rented:
-                is_rented = False
-                print(f"\n You returned {self.brand} {self.model} car")
+            if car.model.lower() == model.lower() and car.is_rented:
+                car.is_rented = False
+                print(f'\n🔁 You returned: {car.brand} {car.model}')
                 return
-            print('car not found or rented')
-            
+        print('⚠️ Car not found or not rented.')
 
 
-        
+# ==== Testing ====
 
+car_rental_system = CarRentalSystem()
 
+# Add cars
+car_rental_system.add_car(Car('Tesla', 'TSX', 2025))
+car_rental_system.add_car(Car('Mercedes', 'Benz', 2023))
 
+# View available cars
+car_rental_system.view_available_cars()
 
+# Rent a car
+car_rental_system.rent_car('TSX')
 
+# View again
+car_rental_system.view_available_cars()
 
+# Return car
+car_rental_system.return_car('TSX')
 
-
+# Final chec
+car_rental_system.view_available_cars()
