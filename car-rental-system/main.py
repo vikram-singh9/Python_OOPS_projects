@@ -28,6 +28,29 @@ class carRentalSystem:
         if not available:
             print('cars are not available!!')
 
+    def rent_car(self,model):
+        for car in self.cars:
+            if car.model.lower() == model.lower() and not car.is_rented:
+                car.is_rented = True
+                print(f'\n {self.brand} {self.model} car is rented')
+                return
+            print('car not available!')
+
+    def return_car(self, model):
+        for car in self.cars:
+            if car.model.lower() == model.lower()  and car.is_rented:
+                is_rented = False
+                print(f"\n You returned {self.brand} {self.model} car")
+                return
+            print('car not found or rented')
+            
+
+
+        
+
+
+
+
 
 
 
