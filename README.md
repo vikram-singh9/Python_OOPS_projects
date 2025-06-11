@@ -12,9 +12,10 @@ Each project is created step-by-step with simplicity, clarity, and learning in m
 
 | Project                     | Description                                                |
 |----------------------------|------------------------------------------------------------|
-| 🛒 Grocery Billing System   | Add items, calculate bills, and print receipts via console |
-| 📓 Digital Diary (Note App) | Create, view, delete personal notes with timestamps        |
-
+| Grocery Billing System   | Add items, calculate bills, and print receipts via console |
+| Digital Diary (Note App) | Create, view, delete personal notes with timestamps        |
+| Course Enrollment | enroll students , view all enerolled stundents and courses        |
+| Car rental syestem  | rent a car system  a simple oops project!     |
 ---
 
 ## 📌 Objective
