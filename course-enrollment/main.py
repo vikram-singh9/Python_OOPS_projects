@@ -21,17 +21,18 @@ class Student:
             print(f'{self.name} is already enrolled in {course.name}.')
 
     def view_enroll_courses(self):
-        print(f'enrolled courses of {self.name}')
+        print(f'enrolled courses of **{self.name}**')
         if self.enrolled_courses:
             for course in self.enrolled_courses:
-                    course.show_info()
+                course.show_info()
         else:
-                print(f'{self.name} is not enrolled in any courses.')
+            print(f'{self.name} is not enrolled in any courses.')
 
 course1 = Course(101, 'Python Programming', 'MR. Vikram')
 course2 = Course(102, 'javascript Programming', 'MR. Ali Ahmed')
 course3 = Course(103, 'C# Programming', 'MR. Waqas')
 
+print('=== Student enrolled in the courses ===')
 
 rahul = Student('Rahul')
 wajahat = Student('Wajahat')
@@ -45,7 +46,15 @@ samir.enroll(course1)
 rahul.enroll(course2)
 ryan.enroll(course3)
 
-# samir.view_enroll_courses()
+lana.enroll(course1)
+lana.enroll(course3)
+lana.enroll(course2)
+
+print('=== View enrolled courses ===')
+
+samir.view_enroll_courses()
+
+lana.view_enroll_courses()
 
 
         
