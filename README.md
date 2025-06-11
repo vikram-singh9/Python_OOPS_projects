@@ -16,6 +16,8 @@ Each project is created step-by-step with simplicity, clarity, and learning in m
 | Digital Diary (Note App) | Create, view, delete personal notes with timestamps        |
 | Course Enrollment | enroll students , view all enerolled stundents and courses        |
 | Car rental syestem  | rent a car system  a simple oops project!     |
+| space mission tracker  | add, track space mission also filter!     |
+| student-addendance-system  | student-addendance and add/remove!     |
 ---
 
 ## 📌 Objective
